@@ -75,7 +75,7 @@ close.TextSize = 21.000
 close.TextWrapped = true
 close.MouseButton1Down:connect(function()
 CipX.Visible = false
-open.Visible = true
+openmain.Visible = true
 end)
  
 openmain.Name = "openmain"
