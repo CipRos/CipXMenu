@@ -1,0 +1,111 @@
+-- Made By CipX
+print("Welcome to CipX's Test GUI")
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local prisonbreakerv15 = Instance.new("TextButton")
+local prisonbreakerv16 = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+--Properties:
+ScreenGui.Parent = game.CoreGui
+ 
+
+
+main.Name                   = "main"
+main.Parent                 = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+main.BackgroundTransparency = 0.200
+main.Position = UDim2.new(0.294545442, 0, 0.29922995, 0)
+main.Size = UDim2.new(0, 677, 0, 315)
+main.Visible                = false
+main.Active                 = true
+main.Draggable              = true
+ 
+title.Name             = "title"
+title.Parent           = main
+title.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+title.Size = UDim2.new(0, 677, 0, 50)
+title.Font = Enum.Font.GothamBold
+title.Text = "CipX's Test GUI"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 21.000
+ 
+prisonbreakerv15.Name             = "prisonbreakerv15"
+prisonbreakerv15.Parent           = main
+prisonbreakerv15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+prisonbreakerv15.Position = UDim2.new(0.0206794683, 0, 0.288888901, 0)
+prisonbreakerv15.Size = UDim2.new(0, 184, 0, 50)
+prisonbreakerv15.Font = Enum.Font.GothamBold
+prisonbreakerv15.Text = "FPS Menu"
+prisonbreakerv15.TextColor3 = Color3.fromRGB(0, 0, 0)
+prisonbreakerv15.TextSize = 20.000
+prisonbreakerv15.TextWrapped = true
+prisonbreakerv15.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://pastebin.com/raw/KNUzQPYS",true))()
+print("[CipX] Launched Reviz Admin")
+end)
+ 
+prisonbreakerv16.Name = "prisonbreakerv16"
+prisonbreakerv16.Parent = main
+prisonbreakerv16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+prisonbreakerv16.Position = UDim2.new(0.703606784, 0, 0.288763165, 0)
+prisonbreakerv16.Size = UDim2.new(0, 184, 0, 50)
+prisonbreakerv16.Font = Enum.Font.GothamBold
+prisonbreakerv16.Text = "Remove GUI"
+prisonbreakerv16.TextColor3 = Color3.fromRGB(0, 0, 0)
+prisonbreakerv16.TextSize = 20.000
+prisonbreakerv16.TextWrapped = true
+prisonbreakerv16.MouseButton1Down:connect(function()
+print("Im gone 1")
+ScreenGui:Destroy()
+print("Im gone 2")
+end)
+ 
+close.Name             = "close"
+close.Parent           = main
+close.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+close.Position = UDim2.new(0.926144779, 0, 0, 0)
+close.Size = UDim2.new(0, 50, 0, 50)
+close.Font = Enum.Font.GothamBold
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextSize = 21.000
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+CipX.Visible = false
+open.Visible = true
+end)
+ 
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0.0066666659, 0, 0.393839389, 0)
+openmain.Size = UDim2.new(0, 142, 0, 33)
+openmain.Active = true
+openmain.Draggable = true
+ 
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+open.Size = UDim2.new(0, 142, 0, 33)
+open.Font = Enum.Font.GothamBold
+open.Text = "OPEN"
+open.TextColor3 = Color3.new(0, 0, 0)
+open.TextSize = 18
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+openmain.Visible = false
+main.Visible = true
+end)
+
+while true do
+    for hue = 0, 255, 4 do
+        -- HSV = hue, saturation, value
+        -- If we loop from 0 to 1 repeatedly, we get a rainbow!
+        main.BorderColor3     = Color3.fromHSV(hue/256, 1, 1)
+        main.BackgroundColor3 = Color3.fromHSV(hue/256, .5, .8)
+        wait()
+    end
+end
